@@ -1,0 +1,71 @@
+#include <nanobind/nanobind.h>
+#include <nanobind/stl/string.h>
+#include <nanobind/trampoline.h>
+#include <nanobind/stl/function.h>
+#include <nanobind/stl/shared_ptr.h>
+#include <nanobind/stl/unique_ptr.h>
+
+#include "zoom_sdk.h"
+
+#include "meeting_service_interface.h"
+#include "setting_service_interface.h"
+#include "auth_service_interface.h"
+#include "meeting_service_components/meeting_ai_companion_interface.h"
+#include "meeting_service_components/meeting_recording_interface.h"
+#include "meeting_service_components/meeting_audio_interface.h"
+#include "meeting_service_components/meeting_reminder_ctrl_interface.h"
+#include "meeting_service_components/meeting_breakout_rooms_interface_v2.h"
+#include "meeting_service_components/meeting_sharing_interface.h"
+#include "meeting_service_components/meeting_chat_interface.h"
+#include "meeting_service_components/meeting_smart_summary_interface.h"
+#include "meeting_service_components/meeting_configuration_interface.h"
+#include "meeting_service_components/meeting_video_interface.h"
+#include "meeting_service_components/meeting_inmeeting_encryption_interface.h"
+#include "meeting_service_components/meeting_participants_ctrl_interface.h"
+#include "meeting_service_components/meeting_waiting_room_interface.h"
+#include "meeting_service_components/meeting_webinar_interface.h"
+#include "meeting_service_components/meeting_raw_archiving_interface.h"
+
+
+
+
+
+#include "rawdata/zoom_rawdata_api.h"
+#include "rawdata/rawdata_audio_helper_interface.h"
+#include "rawdata/rawdata_video_source_helper_interface.h"
+#include "rawdata/rawdata_share_source_helper_interface.h"
+#include "rawdata/rawdata_renderer_interface.h"
+
+#include <iostream>
+#include <functional>
+#include <memory>
+
+namespace nb = nanobind;
+using namespace ZOOMSDK;
+
+void init_zoom_rawdata_api_binding(nb::module_ &m) {
+    m.def("GetAudioRawdataHelper", []() -> ZOOM_SDK_NAMESPACE::IZoomSDKAudioRawDataHelper* {
+        return ZOOM_SDK_NAMESPACE::GetAudioRawdataHelper();
+    }, nb::rv_policy::take_ownership);
+
+    m.def("GetRawdataVideoSourceHelper", []() -> ZOOM_SDK_NAMESPACE::IZoomSDKVideoSourceHelper* {
+        return ZOOM_SDK_NAMESPACE::GetRawdataVideoSourceHelper();
+    }, nb::rv_policy::take_ownership);
+
+    m.def("GetRawdataShareSourceHelper", []() -> ZOOM_SDK_NAMESPACE::IZoomSDKShareSourceHelper* {
+        return ZOOM_SDK_NAMESPACE::GetRawdataShareSourceHelper();
+    }, nb::rv_policy::take_ownership);
+
+    m.def("createRenderer", [](IZoomSDKRendererDelegate* pDelegate) -> IZoomSDKRenderer* {
+        IZoomSDKRenderer* pRenderer = nullptr;
+        SDKError err = createRenderer(&pRenderer, pDelegate);
+        if (err != SDKERR_SUCCESS) {
+            throw std::runtime_error("Failed to create renderer: " + std::to_string(err));
+        }
+        return pRenderer;
+    }, nb::rv_policy::reference);
+
+    m.def("destroyRenderer", [](IZoomSDKRenderer* pRenderer) {
+        return destroyRenderer(pRenderer);
+    }, "Destroy a renderer instance");
+}
