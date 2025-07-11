@@ -1,3 +1,9 @@
+---
+layout: default
+zoom_verification: ""
+title: Docs
+---
+
 <meta name="zoom-domain-verification" content="">
 
 # MyPrivateRecorder
