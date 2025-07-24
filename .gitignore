@@ -1,1 +1,5 @@
 venv
+**/bandit-env
+
+**log_**.json
+**/py-zoom-meeting-sdk/run.md
