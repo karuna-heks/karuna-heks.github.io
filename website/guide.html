@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zoom Guide – MyPrivateRecorder</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:760px;margin:2rem auto;padding:0 1rem;line-height:1.55}
+    h1,h2{color:#0b5cff}
+    code{background:#f2f4f7;padding:2px 4px;border-radius:4px}
+  </style>
+</head>
+<body>
+<h1>Zoom‑specific Guide</h1>
+
+<h2>1. Adding the App</h2>
+<ol>
+  <li>Open the private install link:<br>
+      <code>https://marketplace.zoom.us/apps/APP_ID/install</code></li>
+  <li>Authorize the standard Meeting SDK permissions (audio access).</li>
+</ol>
+
+<h2>2. Using the App</h2>
+<ol>
+  <li>Start or join the Zoom meeting you wish to record.</li>
+  <li>Run the CLI command:<br>
+  <code>python sample_program/sample.py -m "&lt;MEETING_ID&gt;:&lt;PASSCODE&gt;"</code></li>
+  <li>The recorder bot appears in the participant list and writes
+      <code>meeting_YYYYMMDD_HHMMSS.wav</code> to the
+      <code>sample_program/out/audio/</code> folder.</li>
+</ol>
+
+<h2>3. Removing the App</h2>
+<ol>
+  <li>In the Zoom client, open <em>Apps › Manage</em>.</li>
+  <li>Find <strong>MyPrivateRecorder</strong> and click <em>Remove</em>.</li>
+  <li>Delete any local recordings you no longer need.</li>
+</ol>
+
+<h2 id="faq">FAQ</h2>
+<p><strong>Q: Where are files stored?</strong><br>
+A: Only on your computer, in the folder shown in the terminal.</p>
+
+<p><strong>Q: How do I change the folder?</strong><br>
+A: Set the environment variable <code>OUTPUT_DIR</code> before running.</p>
+
+<p><strong>Q: Does the app send data anywhere?</strong><br>
+A: No, it is fully offline.</p>
+</body>
+</html>
