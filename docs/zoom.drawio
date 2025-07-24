@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="Page-1" id="ja5C6j4sx8-x_VvYVY9a">
+    <mxGraphModel dx="1042" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9vgyNKJfV6F58xejjuT7-1" value="Local PC" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="430" width="800" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="9vgyNKJfV6F58xejjuT7-1" source="9vgyNKJfV6F58xejjuT7-2" target="9vgyNKJfV6F58xejjuT7-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="9vgyNKJfV6F58xejjuT7-1" target="9vgyNKJfV6F58xejjuT7-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="80" y="60" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-2" value="&lt;div&gt;CLI Launcher&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="20" y="87.5" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-4" value="Meeting SDK" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="220" y="47.5" width="500" height="132.5" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="9vgyNKJfV6F58xejjuT7-4" source="9vgyNKJfV6F58xejjuT7-3" target="9vgyNKJfV6F58xejjuT7-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-3" value="&lt;div&gt;SDKAuth&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-4">
+          <mxGeometry x="20" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="9vgyNKJfV6F58xejjuT7-4" source="9vgyNKJfV6F58xejjuT7-5" target="9vgyNKJfV6F58xejjuT7-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-5" value="Connect to meeting" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-4">
+          <mxGeometry x="180" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-6" value="Recording" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-4">
+          <mxGeometry x="340" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-10" value="LLM Summarizer" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="560" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="9vgyNKJfV6F58xejjuT7-1" source="9vgyNKJfV6F58xejjuT7-9" target="9vgyNKJfV6F58xejjuT7-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-9" value="Whisper-large" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="400" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="9vgyNKJfV6F58xejjuT7-1" source="9vgyNKJfV6F58xejjuT7-8" target="9vgyNKJfV6F58xejjuT7-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-8" value="Write PCM frames (.wav)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="240" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="9vgyNKJfV6F58xejjuT7-1" source="9vgyNKJfV6F58xejjuT7-6" target="9vgyNKJfV6F58xejjuT7-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="118" />
+              <mxPoint x="750" y="190" />
+              <mxPoint x="220" y="190" />
+              <mxPoint x="220" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-16" value="if recording&lt;div&gt;was&lt;/div&gt;&lt;div&gt;interrupted&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="9vgyNKJfV6F58xejjuT7-15">
+          <mxGeometry x="-0.8114" y="1" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-21" value="Meeting summary.md" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="40" y="230" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=80;entryDy=65;entryPerimeter=0;" edge="1" parent="9vgyNKJfV6F58xejjuT7-1" source="9vgyNKJfV6F58xejjuT7-10" target="9vgyNKJfV6F58xejjuT7-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9vgyNKJfV6F58xejjuT7-24" value="meeting ID:pass" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="9vgyNKJfV6F58xejjuT7-1">
+          <mxGeometry x="25" y="30" width="110" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
